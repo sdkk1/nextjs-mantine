@@ -78,7 +78,7 @@ module.exports = {
 
     // NOTE: React関連のルール
     'react/display-name': 'error',
-    'react/destructuring-assignment': ['error', 'never'],
+    'react/destructuring-assignment': ['error', 'always'],
     'react/jsx-pascal-case': 'error',
     'react/jsx-handler-names': [
       'error',
