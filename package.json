@@ -11,17 +11,24 @@
     "format": "prettier --write 'src/**/*.{ts,tsx,css,scss}'"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@mantine/core": "^4.2.5",
     "@mantine/dates": "^4.2.5",
     "@mantine/form": "^4.2.5",
     "@mantine/hooks": "^4.2.5",
     "@mantine/next": "^4.2.5",
     "@mantine/notifications": "^4.2.5",
+    "@supabase/supabase-js": "^1.35.7",
+    "axios": "^1.1.2",
+    "date-fns": "^2.29.3",
     "dayjs": "^1.11.5",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tabler-icons-react": "^1.55.0"
+    "react-query": "^4.0.0-beta.10",
+    "tabler-icons-react": "^1.55.0",
+    "yup": "^0.32.11",
+    "zustand": "^4.1.2"
   },
   "devDependencies": {
     "@types/node": "18.8.3",
