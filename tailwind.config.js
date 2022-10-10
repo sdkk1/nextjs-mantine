@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
   corePlugins: {
     // NOTE: Matine の NormalizeCSS と競合するため、Tailwind 側の設定をOFFにする
     // (cf. https://tailwindcss.com/docs/preflight)

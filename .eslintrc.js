@@ -4,10 +4,11 @@ module.exports = {
   parserOptions: { project: './tsconfig.json' },
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended',
     'next/core-web-vitals',
     'prettier',
   ],
-  plugins: ['import', 'unused-imports'],
+  plugins: ['import', 'unused-imports', 'tailwindcss'],
   rules: {
     // NOTE: import関連のルール
     'import/order': [
@@ -131,5 +132,13 @@ module.exports = {
         filter: { regex: '^_', match: false },
       },
     ],
+
+    // NOTE: Tailwind CSS関連のルール
+    'tailwindcss/classnames-order': 'error',
+    'tailwindcss/enforces-negative-arbitrary-values': 'error',
+    'tailwindcss/enforces-shorthand': 'error',
+    'tailwindcss/no-arbitrary-value': 'error',
+    'tailwindcss/no-custom-classname': 'error',
+    'tailwindcss/no-contradicting-classname': 'error',
   },
 }
