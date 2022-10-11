@@ -111,10 +111,18 @@ module.exports = {
         selector: ['typeLike'],
         format: ['StrictPascalCase'],
       },
-      // NOTE: function, parameter, method(classMethod, objectLiteralMethod, typeMethod)は、strictCamelCase
+      // NOTE: function, method(classMethod, objectLiteralMethod, typeMethod)は、strictCamelCase
       {
-        selector: ['function', 'parameter', 'method'],
+        selector: ['function', 'method'],
         format: ['strictCamelCase'],
+        filter: { regex: '^_', match: false },
+      },
+      // NOTE: parameter は、strictCamelCase
+      // (ただし、未使用の parameter (_で始まる)は除外する)
+      {
+        selector: ['parameter'],
+        format: ['strictCamelCase'],
+        filter: { regex: '^_', match: false },
       },
       // NOTE: variable は、strictCamelCase or UPPER_CASE(固定値定義のみ)
       // (ReactFuncitonComponent は StrictPascalCase で命名するため、types から function を除外する)
@@ -124,6 +132,7 @@ module.exports = {
         format: ['strictCamelCase', 'UPPER_CASE'],
       },
       // NOTE: boolean の variable は、特定の prefix をつけて StrictPascalCase
+      // (ただし、未使用の variable (_で始まる)は除外する)
       {
         selector: 'variable',
         types: ['boolean'],
