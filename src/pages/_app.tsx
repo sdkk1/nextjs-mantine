@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
 import { MantineProvider } from '@mantine/core'
+import { NotificationsProvider } from '@mantine/notifications'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
@@ -29,7 +30,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       withNormalizeCSS
       theme={myTheme}
     >
-      <Component {...pageProps} />
+      <NotificationsProvider limit={2}>
+        <Component {...pageProps} />
+      </NotificationsProvider>
     </MantineProvider>
     <ReactQueryDevtools initialIsOpen={false} />
   </QueryClientProvider>
