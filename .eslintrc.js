@@ -81,15 +81,6 @@ module.exports = {
     'react/display-name': 'error',
     'react/destructuring-assignment': ['error', 'always'],
     'react/jsx-pascal-case': 'error',
-    'react/jsx-handler-names': [
-      'error',
-      {
-        eventHandlerPrefix: 'handle',
-        eventHandlerPropPrefix: 'on',
-        checkLocalVariables: false,
-        checkInlineFunction: true,
-      },
-    ],
     'react/function-component-definition': [
       'error',
       { namedComponents: 'arrow-function' },
